@@ -48,13 +48,6 @@ function proximaFaixa() {
     trocarNomeFaixa();
 }
 
-function tocarDepoisDeCarregar() {
-    tocarFaixa();
-    taTocando = 1;
-    audioCapitulo.removeEventListener('canplaythrough', tocarDepoisDeCarregar);
-}
-
-
 function voltarFaixa() {
     if (capituloAtual === 1) {
         capituloAtual = numeroCapitulos;
