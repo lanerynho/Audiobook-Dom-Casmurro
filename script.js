@@ -42,7 +42,7 @@ function proximaFaixa() {
     capituloAtual = capituloAtual + 1;
     }
 
-    audioCapitulo.src = '/aula 1 (do zero)/books/dom-casmurro/' + capituloAtual + '.mp3';
+    audioCapitulo.src = '/books/dom-casmurro/' + capituloAtual + '.mp3';
     tocarFaixa();
     taTocando = 1;
     trocarNomeFaixa();
@@ -55,7 +55,7 @@ function voltarFaixa() {
     capituloAtual = capituloAtual - 1;
     }
 
-    audioCapitulo.src = '/aula 1 (do zero)/books/dom-casmurro/' + capituloAtual + '.mp3';
+    audioCapitulo.src = '/books/dom-casmurro/' + capituloAtual + '.mp3';
     tocarFaixa();
     taTocando = 1;
     trocarNomeFaixa();
