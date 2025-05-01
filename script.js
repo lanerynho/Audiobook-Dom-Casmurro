@@ -10,6 +10,8 @@ let capituloAtual = 1;
 
 
 function tocarFaixa() {
+    audioCapitulo.muted = false;
+    
     audioCapitulo.play();
     botaoPlayPause.classList.remove('bi-play-circle-fill');
     botaoPlayPause.classList.add('bi-pause-circle-fill');
