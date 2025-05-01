@@ -43,11 +43,13 @@ function proximaFaixa() {
     }
 
     audioCapitulo.src = '/books/dom-casmurro/' + capituloAtual + '.mp3';
-    setTimeout(() => {
+    audioCapitulo.addEventListener('canplaythrough', tocarDepoisDeCarregar);
+
+function tocarDepoisDeCarregar() {
     tocarFaixa();
     taTocando = 1;
-    trocarNomeFaixa();
-}, 300);
+    audioCapitulo.removeEventListener('canplaythrough', tocarDepoisDeCarregar);
+}
 }
 
 function voltarFaixa() {
