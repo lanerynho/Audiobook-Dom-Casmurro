@@ -8,6 +8,7 @@ const numeroCapitulos = 10;
 let taTocando = 0;
 let capituloAtual = 1;
 
+
 function tocarFaixa() {
     audioCapitulo.play();
     botaoPlayPause.classList.remove('bi-play-circle-fill');
