@@ -11,7 +11,7 @@ let capituloAtual = 1;
 
 function tocarFaixa() {
     audioCapitulo.muted = false;
-    
+
     audioCapitulo.play();
     botaoPlayPause.classList.remove('bi-play-circle-fill');
     botaoPlayPause.classList.add('bi-pause-circle-fill');
@@ -44,11 +44,16 @@ function proximaFaixa() {
     capituloAtual = capituloAtual + 1;
     }
 
-    audioCapitulo.src = '/books/dom-casmurro/' + capituloAtual + '.mp3';
+    audioCapitulo.src = './books/dom-casmurro/' + capituloAtual + '.mp3?v=' + Date.now();
     tocarFaixa();
     taTocando = 1;
     trocarNomeFaixa();
 }
+
+audioCapitulo.addEventListener('error', () => {
+    console.error('Erro ao carregar áudio:', audioCapitulo.src);
+});
+
 
 function voltarFaixa() {
     if (capituloAtual === 1) {
@@ -57,7 +62,7 @@ function voltarFaixa() {
     capituloAtual = capituloAtual - 1;
     }
 
-    audioCapitulo.src = '/books/dom-casmurro/' + capituloAtual + '.mp3';
+    audioCapitulo.src = './books/dom-casmurro/' + capituloAtual + '.mp3?v=' + Date.now();
     tocarFaixa();
     taTocando = 1;
     trocarNomeFaixa();
